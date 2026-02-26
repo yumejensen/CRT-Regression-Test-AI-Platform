@@ -29,9 +29,8 @@ Login To Copado AI Platform
     ${skip_visible}=        IsText                 Skip Questions    timeout=3s
     Run Keyword If          ${skip_visible}        ClickText         Skip Questions
     
-    # Create new chat - using ClickElement with multiple fallback strategies
-    ${clicked}=             Run Keyword And Return Status    ClickElement    xpath=//button[contains(., 'Create new chat')]
-    Run Keyword Unless      ${clicked}             ClickElement    xpath=//a[contains(., 'Create new chat')]
+    # Create new chat
+    ClickText               Create new chat
     
     # Verify chat interface is ready
     VerifyText              Send                   timeout=10s
