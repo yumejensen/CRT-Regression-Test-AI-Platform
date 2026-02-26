@@ -17,21 +17,19 @@ Suite Teardown          Close All Browsers
 
 Test case
     GoTo    https://robotic.copado.com
-    ClickText    Continue with email →
-    TypeText    Email    Choust4@lsu.edu
-    TypeSecret    Password    [enter password here]
-    ClickText    LOGIN
-    ClickElement    /html[1]/body[1]/app-root[1]/ng-component[1]/div[1]/div[1]/app-sidebar[1]/div[1]/div[1]/div[1]/cds-app-switcher[1]/div[1]/button[1]
-    ClickText    Copado AI Platform
-    SwitchWindow    NEW
-    ClickText    Skip Questions
+    ClickText               Continue with email
+    VerifyText              Email                  timeout=5s
+    TypeText                Email                  ${AI_USER}
+    TypeSecret              Password               ${AI_PASS}
+    ClickText               LOGIN
+    ClickText               Skip Questions
     ClickText    Workspace Details
     ClickText    Integrations    partial_match=False
     ClickText    Connect    anchor=Connect your Salesforce org to the Copado AI Platform to analyze metadata,\n generate Apex code, and run tests using natural language. No full CI/CD setup required.\n Ideal for metadata-only projects or evaluations, this integration helps you build production-ready solutions tailored to your org.
     TypeText    Name    yjensen@copado.com.playground
     ClickText    Connect    anchor=Cancel
     TypeText    Username    yjensen@copado.com.playground
-    TypeSecret    Password    [enter password here]
+    TypeSecret    Password    yby_jwt*jzv!pan2ZKX
     ClickText    Log In
     TypeText    Verification Code    955474
     ClickText    Verify
