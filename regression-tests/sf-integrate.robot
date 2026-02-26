@@ -24,8 +24,8 @@ Login To Copado AI Platform
     ClickText               Skip Questions
     
     # Click onto Workspace Details
-    VerifyText              Workspace Details
-    ClickText               Workspace Details
+    VerifyItem              Workspace Details
+    ClickItem              Workspace Details
 
 *** Keywords ***
 Setup Browser
