@@ -1,5 +1,5 @@
 *** Settings ***
-Library                 QForce
+Library                 QWeb
 Suite Setup             Setup Browser
 Suite Teardown          Close All Browsers
 
@@ -22,11 +22,13 @@ Login To Copado AI Platform
     TypeSecret              Password               ${AI_PASS}
     ClickText               LOGIN
     ClickText               Skip Questions
-    
+
+Create New Chat 
     # Wait for successful login and verify we're on the AI Platform
     VerifyItem              Create new chat        timeout=30s
     ClickItem               Create new chat
-    
+
+Send Message  
     # # Handle optional onboarding questions
     # ClickElement            id=ai-prompt-input
     # TypeText    Hello    ai-prompt-input
@@ -37,6 +39,8 @@ Login To Copado AI Platform
     # TypeText                Input                  ${MESSAGE}
     # ClickText            ai-prompt-send
     VerifyElement    //textarea[@placeholder\='How can I help you today?']    20
+    
+
 
 
 *** Keywords ***
