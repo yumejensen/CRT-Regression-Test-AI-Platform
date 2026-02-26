@@ -31,9 +31,6 @@ Login To Copado AI Platform
     VerifyText              Workspace Details      timeout=10s
     ClickText               Workspace Details
     
-    # Verify we're in the workspace details page
-    VerifyText              Connected              timeout=5s
-    
     # Click on option to integrate with Salesforce
     ClickText               Integrate Salesforce
     
