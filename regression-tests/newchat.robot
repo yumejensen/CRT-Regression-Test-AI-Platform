@@ -36,7 +36,7 @@ Login To Copado AI Platform
     # # TypeText     Hello   ai-prompt-input
     # TypeText                Input                  ${MESSAGE}
     # ClickText            ai-prompt-send
-    VerifyElement    //textarea[@placeholder\='Ask a question...']    20
+    VerifyElement    //textarea[@placeholder\='How can I help you today?']    20
 
 
 *** Keywords ***
