@@ -17,10 +17,10 @@ Login
     TypeSecret            Password    ${AI_PASS}
     ClickText             LOGIN
     LogScreenshot
-    VerifyText            Skip Questions    timeout=20s
+    VerifyText            Skip Questions    timeout=10s
     ClickText             Skip Questions
 Connect Copado Integration
-    VerifyText    My Integrations    timeout=20s
+    VerifyText    My Integrations    timeout=10s
     ClickText    My Integrations
     LogScreenshot
     ClickText    Connect    anchor=Connect Copado AI to your Copado CI/CD environment
@@ -29,7 +29,7 @@ Type in Playground Name
     TypeText    Name    playground
 Type in Personal API Key
     LogScreenshot
-    VerifyText          API Key    timeout=20s
+    VerifyText          API Key    timeout=10s
     TypeText            API Key    ${C_PERSONAL}    anchor=Copado API Key
     ClickText           Next Step
 Select Credentials and Project
