@@ -28,9 +28,12 @@ Login To Copado AI Platform
     ClickItem               Create new chat
     
     # # Handle optional onboarding questions
-    ClickElement            id=ai-prompt-input
-    TypeText    Hello    ai-prompt-input
-    ClickElement            id=ai-prompt-send    js=True
+    # ClickElement            id=ai-prompt-input
+    # TypeText    Hello    ai-prompt-input
+
+    ClickText    ai-prompt-input
+    TypeText     Hello   ai-prompt-input
+    ClickText            ai-prompt-send
 
 *** Keywords ***
 Setup Browser
