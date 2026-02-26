@@ -23,7 +23,7 @@ Test case
     TypeSecret              Password               ${AI_PASS}
     ClickText               LOGIN
     #ClickText               Skip Questions
-    ClickText    Workspace Details
+    ClickItem    Workspace Details
     ClickText    Integrations    partial_match=False
     ClickText    Connect    anchor=Connect your Salesforce org to the Copado AI Platform to analyze metadata,\n generate Apex code, and run tests using natural language. No full CI/CD setup required.\n Ideal for metadata-only projects or evaluations, this integration helps you build production-ready solutions tailored to your org.
     TypeText    Name    yjensen@copado.com.playground
