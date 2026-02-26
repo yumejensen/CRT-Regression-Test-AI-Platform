@@ -21,7 +21,7 @@ Login
 Connect Copado Integration
     ClickText    My Integrations
     LogScreenshot
-    ClickText    Connect    anchor=Copado
+    ClickText    Connect    anchor=Connect Copado AI to your Copado CI/CD environment
 Type in Name and API Keys  
     LogScreenshot
     TypeText    Name    playground
