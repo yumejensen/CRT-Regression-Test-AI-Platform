@@ -31,7 +31,8 @@ Login To Copado AI Platform
     # ClickElement            id=ai-prompt-input
     # TypeText    Hello    ai-prompt-input
 
-    ClickText    ai-prompt-input
+    # ClickText    ai-prompt-input
+    ClickCoordinates        600                    300
     TypeText     Hello   ai-prompt-input
     ClickText            ai-prompt-send
 
