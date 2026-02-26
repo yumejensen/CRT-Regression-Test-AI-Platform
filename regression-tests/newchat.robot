@@ -12,6 +12,7 @@ Login To Copado AI Platform
     [Tags]             login    ai-platform
     
     # Navigate directly to Copado AI Platform
+    Open Browser    about:blank    chrome
     GoTo                    ${LOGIN_URL}
     VerifyText              Continue with email    timeout=10s
     
