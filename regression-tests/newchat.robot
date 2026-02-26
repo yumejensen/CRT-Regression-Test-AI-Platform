@@ -40,3 +40,4 @@ Setup Browser
     [Documentation]    Opens browser and maximizes window
     Open Browser           about:blank            chrome
     SetConfig              DefaultTimeout         20s
+    SetConfig              ShadowDOM              True
