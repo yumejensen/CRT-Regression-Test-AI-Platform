@@ -31,8 +31,6 @@ Test case
     TypeText    Username    yjensen@copado.com.playground
     TypeSecret    Password    yby_jwt*jzv!pan2ZKX
     ClickText    Log In
-    TypeText    Verification Code    955474
-    ClickText    Verify
     # Log into Copado AI Platform.
 
 Go to Workspace Details
