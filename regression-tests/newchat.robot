@@ -21,9 +21,11 @@ Login To Copado AI Platform
     TypeText                Email                  ${AI_USER}
     TypeSecret              Password               ${AI_PASS}
     ClickText               LOGIN
+    ClickText               Skip Questions
     
     # Wait for successful login and verify we're on the AI Platform
-    VerifyText              Create new chat        timeout=30s
+    VerifyItem              Create new chat        timeout=30s
+    ClickItem               Create new chat
     
     # Handle optional onboarding questions
     ${skip_visible}=        IsText                 Skip Questions    timeout=3s
