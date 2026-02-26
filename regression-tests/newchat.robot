@@ -29,16 +29,17 @@ Create New Chat
     ClickItem               Create new chat
 
 Send Message  
-    # # Handle optional onboarding questions
+    # VerifyElement    //textarea[@placeholder\='How can I help you today?']    20
     # ClickElement            id=ai-prompt-input
     # TypeText    Hello    ai-prompt-input
+    # # TypeText     Hello   ai-prompt-input
 
     # # ClickText    ai-prompt-input
-    # ClickCoordinates        600                    300
-    # # TypeText     Hello   ai-prompt-input
+    ClickCoordinates        600                    300
+    TypeText                ai-prompt-input                ${MESSAGE}
+
     # TypeText                Input                  ${MESSAGE}
-    # ClickText            ai-prompt-send
-    VerifyElement    //textarea[@placeholder\='How can I help you today?']    20
+    ClickText            ai-prompt-send
     
 
 
