@@ -23,8 +23,7 @@ Connect Copado Integration
     ClickText    Connect    anchor=Connect Copado AI to your Copado CI/CD environment to interact with your DevOps pipeline using natural language. Plan sprints, manage user stories, generate and deploy code, and run quality tests directly through Copado AI agents. Learn more: .
 Type in Name and API Keys  
     TypeText    Name    playground
-    ClickText           Connect
-    TypeText    Copado API Key    ${C_PERSONAL}
+    TypeText    API Key    ${C_PERSONAL}
     ClickText    Next Step
     ClickText    Dev1-SFP
     ClickText    Trial - Salesforce Source Format
