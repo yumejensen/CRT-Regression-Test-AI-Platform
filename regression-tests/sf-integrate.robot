@@ -27,6 +27,7 @@ Login To Copado AI Platform
     VerifyItem              Workspace Details
     ClickItem              Workspace Details
 
+    VerifyText             Connected
 *** Keywords ***
 Setup Browser
     [Documentation]    Opens browser and maximizes window
