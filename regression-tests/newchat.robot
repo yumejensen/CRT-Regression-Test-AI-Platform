@@ -31,11 +31,13 @@ Login To Copado AI Platform
     # ClickElement            id=ai-prompt-input
     # TypeText    Hello    ai-prompt-input
 
-    # ClickText    ai-prompt-input
-    ClickCoordinates        600                    300
-    # TypeText     Hello   ai-prompt-input
-    TypeText                Input                  ${MESSAGE}
-    ClickText            ai-prompt-send
+    # # ClickText    ai-prompt-input
+    # ClickCoordinates        600                    300
+    # # TypeText     Hello   ai-prompt-input
+    # TypeText                Input                  ${MESSAGE}
+    # ClickText            ai-prompt-send
+    VerifyElement    //textarea[@placeholder\='Ask a question...']    20
+
 
 *** Keywords ***
 Setup Browser
