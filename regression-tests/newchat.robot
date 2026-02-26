@@ -32,17 +32,13 @@ Send Message
     # VerifyElement    //textarea[@placeholder\='How can I help you today?']    20
     # ClickElement            id=ai-prompt-input
     # TypeText    Hello    ai-prompt-input
-    # # TypeText     Hello   ai-prompt-input
+    # TypeText     Hello   ai-prompt-input
 
-    # # ClickText    ai-prompt-input
+    # ClickText    ai-prompt-input
     ClickCoordinates        600                    300
     TypeText                ai-prompt-input                ${MESSAGE}
-
-    # TypeText                Input                  ${MESSAGE}
     ClickText            ai-prompt-send
     
-
-
 
 *** Keywords ***
 Setup Browser
