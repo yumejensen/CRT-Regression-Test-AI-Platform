@@ -39,7 +39,5 @@ Press the Connect button under the Salesforce tab, not the Copado CICD tab.
 
 Type in the name and then connect.
 
-When redirected to the Salesforce login, add in the credentials and bypass the verification.
-
 Allow to OAuth verification to connect the workspace and the playground together.
     ClickText    Allow
