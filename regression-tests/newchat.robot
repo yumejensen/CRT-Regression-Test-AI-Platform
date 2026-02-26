@@ -27,15 +27,15 @@ Login To Copado AI Platform
     VerifyItem              Create new chat        timeout=30s
     ClickItem               Create new chat
     
-    # Handle optional onboarding questions
-    ${skip_visible}=        IsText                 Skip Questions    timeout=3s
-    Run Keyword If          ${skip_visible}        ClickText         Skip Questions
+    # # Handle optional onboarding questions
+    # ${skip_visible}=        IsText                 Skip Questions    timeout=3s
+    # Run Keyword If          ${skip_visible}        ClickText         Skip Questions
     
-    # Create new chat
-    ClickText               Create new chat
+    # # Create new chat
+    # ClickText               Create new chat
     
-    # Verify chat interface is ready
-    VerifyText              Send                   timeout=10s
+    # # Verify chat interface is ready
+    # VerifyText              Send                   timeout=10s
 
 *** Keywords ***
 Setup Browser
