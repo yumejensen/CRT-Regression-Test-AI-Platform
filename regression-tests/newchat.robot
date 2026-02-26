@@ -8,10 +8,10 @@ ${LOGIN_URL}           https://robotic.copado.com/ai
 
 *** Test Cases ***
 Login To Copado AI Platform
-    [Documentation]    Navigate to Copado Robotic Testing, login with email, and access AI Platform
+    [Documentation]    Navigate to Copado AI Platform, login with email, and create new chat
     [Tags]             login    ai-platform
     
-    # Navigate to Copado Robotic Testing
+    # Navigate directly to Copado AI Platform
     GoTo                    ${LOGIN_URL}
     VerifyText              Continue with email    timeout=10s
     
@@ -22,20 +22,17 @@ Login To Copado AI Platform
     TypeSecret              Password               ${AI_PASS}
     ClickText               LOGIN
     
-    # Wait for successful login - verify we're on the main page
-    VerifyText              app-switcher           timeout=30s
+    # Wait for successful login and verify we're on the AI Platform
+    VerifyText              Create new chat        timeout=30s
     
-    # Switch to new window
-    SwitchWindow            NEW
-    
-    # Handle onboarding and create new chat
+    # Handle optional onboarding questions
     ${skip_visible}=        IsText                 Skip Questions    timeout=3s
     Run Keyword If          ${skip_visible}        ClickText         Skip Questions
     
-    VerifyText              Create new chat        timeout=10s
+    # Create new chat
     ClickText               Create new chat
     
-    # Verify chat is ready
+    # Verify chat interface is ready
     VerifyText              Send                   timeout=10s
 
 *** Keywords ***
