@@ -28,14 +28,9 @@ Login To Copado AI Platform
     ClickItem               Create new chat
     
     # # Handle optional onboarding questions
-    # ${skip_visible}=        IsText                 Skip Questions    timeout=3s
-    # Run Keyword If          ${skip_visible}        ClickText         Skip Questions
-    
-    # # Create new chat
-    # ClickText               Create new chat
-    
-    # # Verify chat interface is ready
-    # VerifyText              Send                   timeout=10s
+    ClickElement            id=ai-prompt-input
+    TypeText    Hello    ai-prompt-input
+    ClickElement            id=ai-prompt-send    js=True
 
 *** Keywords ***
 Setup Browser
