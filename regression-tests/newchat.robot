@@ -18,7 +18,7 @@ Login To Copado AI Platform
     # Login with email
     ClickText               Continue with email
     VerifyText              Email                  timeout=5s
-    TypeText                Email                  ${AI_EMAIL}
+    TypeText                Email                  ${AI_USER}
     TypeSecret              Password               ${AI_PASS}
     ClickText               LOGIN
     
