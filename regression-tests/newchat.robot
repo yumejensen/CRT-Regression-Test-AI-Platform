@@ -1,5 +1,5 @@
 *** Settings ***
-Library                 QForce
+Library                 QForce    QWeb
 Suite Setup             Setup Browser
 Suite Teardown          Close All Browsers
 
