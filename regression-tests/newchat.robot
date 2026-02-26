@@ -33,7 +33,8 @@ Login To Copado AI Platform
 
     # ClickText    ai-prompt-input
     ClickCoordinates        600                    300
-    TypeText     Hello   ai-prompt-input
+    # TypeText     Hello   ai-prompt-input
+    TypeText                Input                  ${MESSAGE}
     ClickText            ai-prompt-send
 
 *** Keywords ***
