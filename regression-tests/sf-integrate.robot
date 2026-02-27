@@ -1,6 +1,6 @@
 *** Settings ***
 Library                 QForce
-Suite Setup             Setup Browser
+Suite Setup             Open Browser    about:blank    chrome
 Suite Teardown          Close All Browsers
 
 *** Test Cases ***
@@ -53,11 +53,3 @@ Login To Copado AI Platform
     
     # # Verify successful integration
     # VerifyText              Successfully connected    timeout=10s
-
-*** Keywords ***
-Setup Browser
-    [Documentation]    Opens browser with optimal settings for Salesforce integration
-    Open Browser           about:blank            chrome
-    SetConfig              DefaultTimeout         20s
-    SetConfig              ShadowDOM              True
-    Maximize Window
