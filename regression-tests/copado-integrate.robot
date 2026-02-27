@@ -3,6 +3,10 @@ Library                 QWeb
 Suite Setup             Open Browser    about:blank    chrome
 Suite Teardown          Close All Browsers
 
+*** Variables ***
+${THREE_DOTS_MENU}    xpath=//cds-icon[@shape='SystemAndDevicesDotsThreeRegularVerticalSolid']
+${DISCONNECT_BTN}     xpath=//button[contains(@class, 'btn-danger')]
+
 *** Test Cases ***
 
 Login
@@ -37,3 +41,12 @@ Type in Actions API Key
 Verify it is connected
     ClickText           Close
     VerifyText   Connected          timeout=15s
+Disconnect the Integration
+    VerifyElement    ${THREE_DOTS_MENU}    timeout=10s
+    ClickElement    ${THREE_DOTS_MENU}
+    VerifyText      Disconnect Integration    timeout=10s
+    ClickText       Disconnect Integration
+    VerifyElement   ${DISCONNECT_BTN}           timeout=5s
+    ClickElement    ${DISCONNECT_BTN}
+Verify it is disconnected
+    VerifyText    Integration disconnected successfully    timeout=10s
