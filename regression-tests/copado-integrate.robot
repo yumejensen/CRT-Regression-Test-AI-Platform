@@ -25,7 +25,6 @@ Type in Personal API Key
     TypeText            API Key    ${C_PERSONAL}    anchor=Name
     ClickText           Next Step
 Select Credentials and Project
-    # 1. Click the Credential dropdown box directly
     ClickElement        xpath=//div[contains(@class, 'ng-select-container') and .//div[text()='Select a credential...']]
     VerifyText          Dev1-SFP    timeout=10s
     ClickText           Dev1-SFP
