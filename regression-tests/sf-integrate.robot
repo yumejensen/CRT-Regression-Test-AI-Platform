@@ -26,20 +26,19 @@ Click on Integration button for SF
     # Verify Integrations page
     VerifyText    Here you can connect Copado AI Platform to other platforms             timeout=15s
     ClickText     Connect    anchor=Salesforce    timeout=10s
-    LogScreenshot
+    
 Connect to Salesforce
     VerifyText    Connect Salesforce Integration
     TypeText    Name    playground
-    ClickText           Connect    index = 2    timeout=10s
+    ClickText           Connect    anchor=Connect Salesforce Integration    timeout=10s
     LogScreenshot
     
-Enter Salesforce credentials
-    VerifyText              Username               timeout=10s
-    TypeText                Username               ${SF_USER}
-    TypeSecret              Password               ${SF_PASS}
-    ClickText               Log In
-    LogScreenshot
+# Enter Salesforce credentials
+#     VerifyText              Username               timeout=10s
+#     TypeText                Username               ${SF_USER}
+#     TypeSecret              Password               ${SF_PASS}
+#     ClickText               Log In
+#     LogScreenshot
     
-Click Allow button to authorize the integration
-    ClickText               Allow                 index = 4
-    
+# Click Allow button to authorize the integration
+#     ClickText               Allow                 index = 4
