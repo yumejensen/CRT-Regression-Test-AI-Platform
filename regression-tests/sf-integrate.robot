@@ -32,13 +32,14 @@ Connect to Salesforce
     TypeText    Name    playground
     ClickText           Connect    anchor=Connect Salesforce Integration    timeout=10s
     LogScreenshot
+    VerifyText          2026 Salesforce                    timeout=15s
     
-# Enter Salesforce credentials
-#     VerifyText              Username               timeout=10s
-#     TypeText                Username               ${SF_USER}
-#     TypeSecret              Password               ${SF_PASS}
-#     ClickText               Log In
-#     LogScreenshot
+Enter Salesforce credentials
+    VerifyText              Username               timeout=10s
+    TypeText                Username               ${SF_USER}
+    TypeSecret              Password               ${SF_PASS}
+    ClickText               Log In
+    LogScreenshot
     
-# Click Allow button to authorize the integration
-#     ClickText               Allow                 index = 4
+Click Allow button to authorize the integration
+    ClickText               Allow                 index = 4
