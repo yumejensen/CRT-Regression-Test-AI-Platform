@@ -17,19 +17,15 @@ Login To Copado AI Platform
     VerifyText              Skip Questions    timeout=10s
     ClickText               Skip Questions
 
-    # # Skip onboarding questions if present
-    # ${skip_visible}=        IsText                 Skip Questions    timeout=3s
-    # IF                      ${skip_visible}
-    #     ClickText           Skip Questions
-    # END
-    
+Verify the My Integrations Page
     # Navigate to My Integrations
     VerifyText              My Integrations      timeout=10s
     ClickText               My Integrations
     
+Click on Integration button for SF
     # Verify Integrations page
     VerifyText    Here you can connect Copado AI Platform to other platforms             timeout=
-    ClickElement     xpath=(//button[contains(@class, 'btn-info')])[1]
+    ClickElement     xpath=(//button[contains(@class, 'btn-info')])[2]
     
     # # Wait for Salesforce login page to appear (may open in new window)
     # ${new_window}=          IsText                 Username         timeout=5s
