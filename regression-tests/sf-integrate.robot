@@ -25,7 +25,8 @@ Verify the My Integrations Page
 Click on Integration button for SF
     # Verify Integrations page
     VerifyText    Here you can connect Copado AI Platform to other platforms             timeout=15s
-    ClickElement     xpath=(//button[contains(@class, 'btn-info')])[2]
+    #ClickElement     xpath=(//button[contains(@class, 'btn-info')])[2]
+    ClickText     Connect    anchor=Salesforce    timeout=10s
     
     # # Wait for Salesforce login page to appear (may open in new window)
     # ${new_window}=          IsText                 Username         timeout=5s
