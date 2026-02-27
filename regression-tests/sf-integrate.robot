@@ -27,10 +27,10 @@ Click on Integration button for SF
     VerifyText    Here you can connect Copado AI Platform to other platforms             timeout=15s
     ClickText     Connect    anchor=Salesforce    timeout=10s
     
-    
 Connect to Salesforce
+    VerifyText    Connect Salesforce Integration
     TypeText    Name    playground
-    ClickText           Connect
+    ClickText           Connect    index = 2    timeout=10s
     
     # # Wait for Salesforce login page to appear (may open in new window)
     # ${new_window}=          IsText                 Username         timeout=5s
