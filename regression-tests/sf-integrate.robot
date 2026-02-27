@@ -32,25 +32,12 @@ Connect to Salesforce
     TypeText    Name    playground
     ClickText           Connect    index = 2    timeout=10s
     
-    # # Wait for Salesforce login page to appear (may open in new window)
-    # ${new_window}=          IsText                 Username         timeout=5s
-    # IF                      ${new_window}
-    #     # If opened in new window, switch to it
-    #     SwitchWindow        NEW
-    # END
+Enter Salesforce credentials
+    VerifyText              Username               timeout=10s
+    TypeText                Username               ${SF_USER}
+    TypeSecret              Password               ${SF_PASS}
+    ClickText               Log In
     
-    # # Enter Salesforce credentials
-    # VerifyText              Username               timeout=10s
-    # TypeText                Username               ${SF_USER}
-    # TypeSecret              Password               ${SF_PASS}
-    # ClickText               Log In
+Click Allow button to authorize the integration
+    ClickText               Allow                 index = 4
     
-    # # Handle OAuth authorization page
-    # VerifyText              Allow                  timeout=15s
-    # VerifyText              will be able to       timeout=5s
-    
-    # # Click Allow button to authorize the integration
-    # ClickText               Allow
-    
-    # # Verify successful integration
-    # VerifyText              Successfully connected    timeout=10s
